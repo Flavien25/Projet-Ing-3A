@@ -76,8 +76,7 @@ for s in range(60): # On fait la boucle ici pour tester les différents seuils
     print('---------- Generalized Pareto Distribution ----------')
     print('Les paremètres de la loi sont :','\n',myFittedDist)
     
-    ## On trace la fonction déterminée et l'histogramme ici cette partie est commentée pour ne pas avoir tous 
-    ## les graphiques affichés
+    ## On trace la fonction déterminée et l'histogramme ici cette partie est commentée pour ne pas avoir tous les graphiques affichés
     # graph = myFittedDist.drawPDF()
     # graph.add(ot.HistogramFactory().build(Seuil).drawPDF())
     # graph.setTitle("Generalized Pareto distribution fitting on the data")
