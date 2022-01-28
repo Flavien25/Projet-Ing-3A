@@ -8,6 +8,8 @@ Ce code a pour principal objectif de donner la meilleure distribution correspond
 sur la librairie Reliability.
 On importe d'abord les données (en entier ou seulement 200 valeurs choisies aléatoirement en fonction de la section commentée), puis on regarde quelles 
 distributions leur correspondent le mieux (d'abord parmi tous types de distribution, puis plus finement sur les trois meilleures).
+Ici, on étudie des données de roulage, mais en changeant l'adresse du fichier et les légendes des graphes, ce code peut être facilement adapté pour 
+n'importe quel usage.
 """
 
 ## Import des librairies et fonctions nécessaires
