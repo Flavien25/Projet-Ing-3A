@@ -19,14 +19,14 @@ import random
 # ## On importe les données
 # data = pd.read_csv('data_roulage_km.csv', delimiter=',',header=None)  
 # data = np.array(data)
-# quantileR=28263 #Valeur trouvée avec le code de Tendance_centrale
+# quantileR=28263 #Valeur trouvée avec le code Tendance_centrale
 
 ## On importe les données puis on en prend que 200 aléatoirement
 random.seed(1)
 #On importe les données
 dataP = pd.read_csv('data_roulage_km.csv', delimiter=',',header=None)  
 dataP = np.array(dataP)
-quantileR=28263 #Valeur trouvé avec le code reliability
+quantileR=28263 #Valeur trouvé avec le code Tendance_centrale
 data=[]
 for b in range(200):
     new=random.randint(0,len(dataP)-1)
