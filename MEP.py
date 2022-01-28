@@ -19,7 +19,7 @@ import random
 # ## On importe les données
 # data = pd.read_csv('data_roulage_km.csv', delimiter=',',header=None)  
 # data = np.array(data)
-# quantileR=28263 #Valeur trouvée avec le code de Louis reliability
+# quantileR=28263 #Valeur trouvée avec le code de Tendance_centrale
 
 ## On importe les données puis on en prend que 200 aléatoirement
 random.seed(1)
