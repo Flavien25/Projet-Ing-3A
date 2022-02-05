@@ -54,13 +54,13 @@ Xi = []                                                             # Future lis
 x = np.linspace(start, finish, p)                                   # Tableau d'abscisses pour le GEV
 F = np.zeros((b, p))                                                # Futur tableau de stockage des GEV calculées
 
+n = 100                                                             # Taille des sous-échantillons de données
+l = round(len(data)/100)                                            # Nombre d'échantillons à générer
+    
 for i in range(b):                                                  # Début du bootstrap
     
     
     ## Génération des échantillons et relevé des max des échantillons ("block maxima")
-    n = 100                                                         # Taille des sous-échantillons de données
-    l = round(len(data)/100)                                        # Nombre d'échantillons à générer
-    
     S = len(data) * np.random.rand(l, n)                            # Génération des entiers qui donneront la position des données à échantillonner dans le
     S = S.astype(int)                                               # tableau initial
     
