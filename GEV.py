@@ -49,9 +49,9 @@ for i in range(len(data)):                                          # retransfor
 
 ## Initialisation du Bootstrap
 b = 1000                                                            # Nombre de boucles du bootstrap
-p = 20001                                                           # Nombre de valeurs d'échantillonnage des GEV du bootstrap
-start = 2E4                                                         # Début de l'échantillonnage des GEV
-finish = 4E4                                                        # Fin de l'échantillonnage des GEV
+p = 60001                                                           # Nombre de valeurs d'échantillonnage des GEV du bootstrap
+start = 1E4                                                         # Début de l'échantillonnage des GEV
+finish = 7E4                                                        # Fin de l'échantillonnage des GEV
 
 Q = []                                                              # Future liste des quantiles (pour moyenne après bootstrap)
 Mu = []                                                             # Future liste des valeurs de mu (pour moyenne après bootstrap)
@@ -115,7 +115,7 @@ for i in range(b):                                                  # Début du 
 q = round(np.mean(Q))
 med = round(np.percentile(Q, 50))
 print('\n')
-print('quantile à 99% analytique: ', q, ' (médiane = ', med, ')')
+print('quantile à 99% : ', q, ' (médiane = ', med, ')')
 
 
 ## Affichage de la superposition de toutes les GEV calculées
