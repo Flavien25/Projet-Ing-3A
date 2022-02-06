@@ -26,13 +26,15 @@ random.seed(1)
 #On importe les données
 dataP = pd.read_csv('data_roulage_km.csv', delimiter=',',header=None)  
 dataP = np.array(dataP)
-quantileR=28263 #Valeur trouvé avec le code Tendance_centrale
+quantileR=28263 #Valeur trouvé avec le code reliability
 data=[]
+new=[]
 for b in range(200):
-    new=random.randint(0,len(dataP)-1)
-    data.append(dataP[new])
+    new.append(random.randint(0,len(dataP)-1))
+new=np.sort(new)    
+for i in range(200):
+    data.append(dataP[new[i]])
 data=np.array(data)
-data=np.sort(data) # On range par ordre croissant les données
 
 ###On Calcule la fonction MEF
 
