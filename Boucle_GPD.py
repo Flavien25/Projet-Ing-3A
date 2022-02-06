@@ -10,12 +10,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 import openturns as ot
 import time
+import random
 
 #On importe les données
 data = pd.read_csv('data_roulage_km.csv', delimiter=',',header=None)  
 data = np.array(data)
 quantileR=28263
 
+## On importe les données puis on en prend que 200 aléatoirement
+random.seed(1)
+#On importe les données
+dataP = pd.read_csv('data_roulage_km.csv', delimiter=',',header=None)  
+dataP = np.array(dataP)
+quantileR=28263 #Valeur trouvé avec le code reliability
+data=[]
+new=[]
+for b in range(200):
+    new.append(random.randint(0,len(dataP)-1))
+new=np.sort(new)    
+for i in range(200):
+    data.append(dataP[new[i]])
+data=np.array(data) 
 
 def MEF(data, u): # On définit la Mean Excess Function
     somme=0
@@ -129,4 +144,3 @@ print('---------Écart avec la valeur réelle---------')
 print(Emin,'%')
 print('---------Valeur du seuil enregistré---------')
 print(valeur_seuil)
-    
