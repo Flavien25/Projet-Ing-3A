@@ -34,7 +34,7 @@ for i in range(len(data)):                                          # retransfor
 # ## Import des données avec reduction à 200 valeurs aléatoires
 # rd.seed(1)                                                          # "graine" pour le générateur de nombres aléatoires (pour obtenir des résutats constants)
 # dataP = np.sort(np.array(pd.read_csv('data_roulage_km.csv'))[:, 0]) # Lecture et conversion en tableau du fichier .csv (adresse à modifier si besoin)
-# D = []                                                              # Futur tableau de l'échantillon de 200 valeurs
+# D = []                                                              # Futur tableau de l'échantillon de 500 valeurs
 
 # for b in range(500):                                                # Boucle de génération des nouvelles données avec:
 #     new = rd.randint(0,len(dataP)-1)                                # création d'un entier aléatoire entre 0 et longueur du tableau de données - 1
