@@ -24,22 +24,28 @@ ot.Log.Show(ot.Log.NONE)                                            # Desactivat
 
 ## Import des données standard
 rd.seed(1)
-data = pd.read_csv('data_roulage_km.csv')                           # Lecture du fichier .csv (nom ou adresse à modifier en fonction des données prises)
-data = np.sort(np.array(data))                                      # Transfert des données dans un tableau et classement (les fonctions suivantes ne 
-                                                                    # fonctionnent qu'avec des données classées dans l'ordre croissant)
+D = np.sort(np.array(pd.read_csv('data_roulage_km.csv'))[:, 0])     # Lecture et conversion en tableau du fichier .csv (adresse à modifier si besoin)
+                                                                    # puis classement des données (les fonctions suivantes ne fonctionnent qu'avec 
+data = np.zeros((len(D),1))                                         # des données croissantes)
+for i in range(len(data)):                                          # retransformation en tableau à deux dimensions pour les besoins du traitement
+    data[i] = np.array(D[i])
+
 
 # ## Import des données avec reduction à 200 valeurs aléatoires
 # rd.seed(1)                                                          # "graine" pour le générateur de nombres aléatoires (pour obtenir des résutats constants)
-# dataP = pd.read_csv('data_roulage_km.csv')                          # Lecture du fichier .csv (nom ou adresse à modifier en fonction des données prises)
-# dataP = np.array(dataP)                                             # Transfert des données dans un tableau
-# data = []                                                           # Futur tableau de l'échantillon de 200 valeurs
+# dataP = np.sort(np.array(pd.read_csv('data_roulage_km.csv'))[:, 0]) # Lecture et conversion en tableau du fichier .csv (adresse à modifier si besoin)
+# D = []                                                              # Futur tableau de l'échantillon de 200 valeurs
 
 # for b in range(200):                                                # Boucle de génération des nouvelles données avec:
 #     new = rd.randint(0,len(dataP)-1)                                # création d'un entier aléatoire entre 0 et longueur du tableau de données - 1
-#     data.append(dataP[new])                                         # ajout à l'échantillon de la donnée de position correspondante
+#     D.append(dataP[new])                                            # ajout à l'échantillon de la donnée de position correspondante
     
-# data = np.sort(np.array(data))                                      # Classement de l'échantillon obtenus (les fonctions suivantes ne fonctionnent qu'avec 
-#                                                                     # des données classées dans l'ordre croissant)
+# D = np.sort(D)                                                      # classement des données (les fonctions suivantes ne fonctionnent qu'avec des 
+# data = np.zeros((len(D),1))                                         # données croissantes)
+
+# for i in range(len(data)):                                          # retransformation en tableau pour les besoins du traitement
+#     data[i] = np.array(D[i])
+
 
 ## Initialisation du Bootstrap
 b = 1000                                                            # Nombre de boucles du bootstrap
