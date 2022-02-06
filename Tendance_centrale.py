@@ -91,7 +91,7 @@ print('--- "Upper estimates" des quantiles à 99% ---')
 print('    Réel          Gamma (3P)         Weibull (3P)      logNormale (2P)')
 print(P)
 print('\n')
-print('--- Ecarts entre quantiles théoriques et qauntile réel ---') # Affiche des écarts au quantile empirique
+print('--- Ecarts entre quantiles théoriques et quantile réel ---') # Affiche des écarts au quantile empirique
 print('     Gamma (3P)         Weibull (3P)       logNormale (2P)')
 print(E)
 print('\n')
