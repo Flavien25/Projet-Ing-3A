@@ -50,7 +50,7 @@ Parameters=result.best_distribution                                 # Extraction
 Name=result.best_distribution_name                                  # Extraction du nom de la meilleure loi
 print('\n')                                                         # Affichage du nom et des paramètres de la meilleure loi
 print('---------------RESULTATS DU CALCUL---------------')
-print('\n', 'Nom de la loi :', Name, '\n','\n', 'Paramètres de la loi : ', '\n', 'Alpha = ',Parameters.alpha, '\n', 'Beta = ',Parameters.beta, '\n', 'Gamma = ',Parameters.gamma)
+print('\n', 'Nom de la loi :', Name, '\n','\n', 'Paramètres de la loi : ', '\n', 'Alpha = ',Parameters.alpha, '\n', 'Beta = ',Parameters.beta, '\n', 'Gamma = ',Parameters.gamma, '\n')
 
 
 ## Fit des "meilleures" lois sur les données de roulage
@@ -90,6 +90,7 @@ print('\n')                                                         # Affichage 
 print('--- "Upper estimates" des quantiles à 99% ---')
 print('    Réel          Gamma (3P)         Weibull (3P)      logNormale (2P)')
 print(P)
+print('\n')
 print('--- Ecarts entre quantiles théoriques et qauntile réel ---') # Affiche des écarts au quantile empirique
 print('     Gamma (3P)         Weibull (3P)       logNormale (2P)')
 print(E)
