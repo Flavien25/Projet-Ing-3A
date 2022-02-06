@@ -36,7 +36,7 @@ for i in range(len(data)):                                          # retransfor
 # dataP = np.sort(np.array(pd.read_csv('data_roulage_km.csv'))[:, 0]) # Lecture et conversion en tableau du fichier .csv (adresse à modifier si besoin)
 # D = []                                                              # Futur tableau de l'échantillon de 200 valeurs
 
-# for b in range(200):                                                # Boucle de génération des nouvelles données avec:
+# for b in range(500):                                                # Boucle de génération des nouvelles données avec:
 #     new = rd.randint(0,len(dataP)-1)                                # création d'un entier aléatoire entre 0 et longueur du tableau de données - 1
 #     D.append(dataP[new])                                            # ajout à l'échantillon de la donnée de position correspondante
     
