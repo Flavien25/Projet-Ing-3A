@@ -37,7 +37,7 @@ data = np.sort(np.array(data)[:, 0])                                # Transfert 
 #     new = rd.randint(0,len(dataP)-1)                                # création d'un entier aléatoire entre 0 et longueur du tableau de données - 1
 #     data.append(dataP[new])                                         # ajout à l'échantillon de la donnée de position correspondante
     
-# data = np.sort(np.array(data))                                      # Classement de l'échantillon obtenus (les fonctions suivantes ne fonctionnent qu'avec 
+# data = np.sort(np.array(data)[:, 0])                                # Classement de l'échantillon obtenus (les fonctions suivantes ne fonctionnent qu'avec 
 #                                                                     # des données classées dans l'ordre croissant)
 
 ## Tests de fit de tous les types de lois
