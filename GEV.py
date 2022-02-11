@@ -45,7 +45,7 @@ x = np.linspace(start, finish, p)                                   # Tableau d'
 F = np.zeros((b, p))                                                # Futur tableau de stockage des GEV calculées
 
 n = 100                                                             # Taille des sous-échantillons de données
-l = round(len(data)/100)                                            # Nombre d'échantillons à générer
+l = round(len(data)/n)                                              # Nombre d'échantillons à générer
 
 for i in range(b):                                                  # Début du bootstrap
         
